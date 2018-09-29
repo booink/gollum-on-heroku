@@ -41,7 +41,7 @@ class App
           git.clone({branch: 'master', bare: @gollum_is_bare}, repo_url, repo_name)
         end
       end
-      repos[repo_name] = Grit::Repo.new(repo_name, {is_bare: @gollum_is_bare})
+      repos[repo_name] = Grit::Repo.init(repo_name, {}, {is_bare: @gollum_is_bare})
       raise "Not found repository" unless repos[repo_name]
 
       repos[repo_name].config['user.email'] = @author_email
