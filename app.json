@@ -1,7 +1,7 @@
 {
   "name": "Gollum on Heroku",
   "description": "auto generate git powered wiki Gollum to Heroku.",
-  "repository": "https://github.com/naoa/gollum-on-heroku",
+  "repository": "https://github.com/booink/gollum-on-heroku",
   "env": {
     "GITHUB_TOKEN": {
       "description": "An access key for GitHub. If this field is empty, it will be deleted after reboot dyno.",
@@ -65,11 +65,6 @@
       "description": "git repository URL must include .git (default: false)",
       "required": false
     }
-  },
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-multi.git"
-    }
-  ]
+  }
 }
 
